@@ -1,0 +1,8 @@
+@import '~@skyux/theme/scss/mixins';
+
+body {
+  background: $sky-background-color-page-default;
+  padding: $sky-space-xl;
+  padding-top: 0;
+  margin: 0;
+}

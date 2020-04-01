@@ -1,20 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
+import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import Tile from './Tile';
 import Modal from './Modal';
-import Welcome from './Welcome';
 
 import '@skyux/theme/css/sky.css';
-import './index.css';
+import './index.scss';
 
 ReactDOM.render(
   <Router>
     <Switch>
       <Route
         path="/"
-        component={Welcome}
-        exact />
+        exact>
+        <p>
+          Welcome to the SKY Add-ins React Demo.
+        </p>
+        <p>
+          Proceed to <Link to="/tile">Tile</Link>.
+        </p>
+      </Route>
       <Route
         path="/tile"
         component={Tile} />

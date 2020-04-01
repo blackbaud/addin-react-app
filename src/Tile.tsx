@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { AddinClient, AddinTileSummaryStyle } from '@blackbaud/sky-addin-client';
 
-import './Tile.css';
+import './Tile.scss';
 
 interface IProps {}
 
 interface IState {
   animal?: string,
   color?: string,
-  profileId?: string,
-  recordId?: string,
-  recordUrl?: string
+  envId?: string,
+  recordId?: string
 }
 
 class Tile extends Component<IProps, IState> {
@@ -28,15 +27,15 @@ class Tile extends Component<IProps, IState> {
       callbacks: {
         init: (args) => {
           this.setState({
-            profileId: args.context.profileId,
-            recordId: args.context.recordId,
-            recordUrl: args.context.recordUrl
+            envId: args.envId,
+            recordId: args.context.recordId
           });
 
           args.ready({
             showUI: true,
             title: 'My First React Typescript Tile',
             tileConfig: {
+              removeInset: true,
               summaryStyle: AddinTileSummaryStyle.Text,
               summaryText: '1.0',
               showHelp: true,
@@ -87,13 +86,10 @@ class Tile extends Component<IProps, IState> {
         <p>Context available to the tile:</p>
         <ul>
           <li>
-            profileId: {this.state.profileId}
+            envId: {this.state.envId}
           </li>
           <li>
             recordId: {this.state.recordId}
-          </li>
-          <li>
-            recordUrl: {this.state.recordUrl}
           </li>
         </ul>
         <p>

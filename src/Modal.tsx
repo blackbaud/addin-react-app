@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AddinClient } from '@blackbaud/sky-addin-client';
-import './Modal.css';
+import './Modal.scss';
 
 interface IProps {}
 
