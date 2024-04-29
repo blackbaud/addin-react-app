@@ -1,3 +1,7 @@
+# Obsolete
+
+This project is no longer maintained.
+
 # SKY Add-in React App Demo
 
 Simple demo showing a React app using the [SKY Add-In framework](https://developer.blackbaud.com/skyapi/docs/addins) and some primitive [SKY UX](https://developer.blackbaud.com/skyux) styles.
